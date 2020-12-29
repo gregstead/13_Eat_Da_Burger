@@ -1,0 +1,22 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "A burger logger with MySQL, Node, Express, Handlebars, and a homemade ORM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregstead/13_Eat_Da_Burger.git"
+  },
+  "author": "greg stead",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregstead/13_Eat_Da_Burger/issues"
+  },
+  "homepage": "https://github.com/gregstead/13_Eat_Da_Burger#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

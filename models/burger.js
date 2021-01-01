@@ -8,7 +8,7 @@ class Burger {
 
   all(cb) {
     orm.selectAll("burgers", (res) => {
-      cb(res);
+      console.log(res);
     });
   }
 }

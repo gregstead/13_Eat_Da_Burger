@@ -3,7 +3,7 @@ const mysql = require("mysql");
 
 const connection = mysql.createConnection({
   host: "localhost",
-  port: process.env.PORT || 3000,
+  port: 3306,
   user: "root",
   password: "pathword",
   database: "burgers_db",
@@ -11,10 +11,7 @@ const connection = mysql.createConnection({
 
 // make connection
 connection.connect((err) => {
-  if (err) {
-    console.log(`error connecting: ${err.stack}`);
-    return;
-  }
+  if (err) throw err;
   console.log(`connected as id: ${connection.threadId}`);
 });
 

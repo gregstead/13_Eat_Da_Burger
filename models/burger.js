@@ -8,11 +8,20 @@ class Burger {
 
   all(cb) {
     orm.selectAll("burgers", (res) => {
-      console.log(res);
+      cb(res);
+    });
+  }
+  add(columns, values, cb) {
+    orm.insertOne("burgers", columns, values, (err, res) => {
+      if (err) throw err;
+      cb(res);
+    });
+  }
+  update(colVal, condition, cb) {
+    orm.updateOne("burgers", colVal, condition, (res) => {
+      cb(res);
     });
   }
 }
 
-const burger = new Burger("ham");
-
-burger.all();
+module.exports = Burger;

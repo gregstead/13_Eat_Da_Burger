@@ -3,18 +3,20 @@ const orm = require("../config/orm");
 
 const burger = {
   all(cb) {
+    // Get all burgers
     orm.selectAll("burgers", (res) => {
       cb(res);
     });
   },
-  add(columns, values, cb) {
-    orm.insertOne("burgers", columns, values, (err, res) => {
+  add(value, cb) {
+    orm.insertOne("burgers", "burger_name", value, (err, res) => {
       if (err) throw err;
       cb(res);
     });
   },
-  update(colVal, condition, cb) {
-    orm.updateOne("burgers", colVal, condition, (res) => {
+  update(id, cb) {
+    // Devour a burger
+    orm.updateOne("burgers", "devoured", "1", "id", id, (res) => {
       cb(res);
     });
   },

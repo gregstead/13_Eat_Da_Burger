@@ -21,11 +21,15 @@ const orm = {
   },
   // updateone( String, Object, String, Function)
   updateOne: (table, column, value, whereColumn, whereValue, cb) => {
-    let queryString = "UPDATE ?? SET ?? = ?? WHERE ?? = ?";
-    connection.query(queryString, (err, result) => {
-      if (err) throw err;
-      cb(result);
-    });
+    let queryString = "UPDATE ?? SET ?? = ? WHERE ?? = ?";
+    connection.query(
+      queryString,
+      [table, column, value, whereColumn, whereValue],
+      (err, result) => {
+        if (err) throw err;
+        cb(result);
+      }
+    );
   },
 };
 

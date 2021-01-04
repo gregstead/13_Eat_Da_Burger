@@ -10,8 +10,8 @@ router.get("/", (req, res) => {
   });
 });
 
-router.route("/api/burgers/:id").put((req, res) => {
-  const id = req.body.iq;
+router.route("/api/burger/:id").put((req, res) => {
+  const id = req.params.id;
   burger.update(id, (result) => {
     if (result) {
       res.sendStatus(200).end();

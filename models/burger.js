@@ -9,8 +9,7 @@ const burger = {
     });
   },
   add(value, cb) {
-    orm.insertOne("burgers", "burger_name", value, (err, res) => {
-      if (err) throw err;
+    orm.insertOne("burgers", "burger_name", value, (res) => {
       cb(res);
     });
   },

@@ -1,23 +1,36 @@
 const router = require("express").Router();
 const burger = require("../models/burger");
 
-// All routes and logic where required
-router.get("/", (req, res) => {
-  burger.all((data) => {
-    // Object for handlebars
-    const hbsObject = { burgers: data };
-    res.render("index", hbsObject);
+// Create
+router.post("/api/burger", (req, response) => {
+  const newBurgerName = req.body.name;
+  burger.add(newBurgerName, (result) => {
+    if (result) {
+      response.sendStatus(200).end();
+    } else {
+      response.sendStatus(400).end();
+    }
   });
 });
 
-router.route("/api/burger/:id").put((req, res) => {
+// Read
+router.get("/", (req, response) => {
+  burger.all((data) => {
+    // Object for handlebars
+    const hbsObject = { burgers: data };
+    response.render("index", hbsObject);
+  });
+});
+
+// Update
+router.put("/api/burger/:id", (req, response) => {
   const id = req.params.id;
   burger.update(id, (result) => {
     if (result) {
-      res.sendStatus(200).end();
+      response.sendStatus(200).end();
     } else {
       console.log(`PUT Error`);
-      res.sendStatus(400).end();
+      response.sendStatus(400).end();
     }
   });
 });

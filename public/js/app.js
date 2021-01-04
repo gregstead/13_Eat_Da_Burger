@@ -1,4 +1,8 @@
 $(document).ready(() => {
+  $("#addBurgerSubmit").on("click", (event) => {
+    event.preventDefault();
+    const newName = "";
+  });
   $(".change-devoured").on("click", (event) => {
     event.preventDefault();
     const id = event.target.dataset.id;
@@ -9,6 +13,7 @@ $(document).ready(() => {
     };
     $.ajax(ajaxObj).then((res) => {
       console.log(res);
+      location.reload();
     });
   });
 });

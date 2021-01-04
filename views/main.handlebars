@@ -9,10 +9,10 @@
     {{#each burgers }}
     {{#unless devoured }}
     <li>
-        {{name}}
+        {{burger_name}}
 
-        <button class="change-sleep" data-id="{{id}}" data-newdevoured="{{devoured}}">
-            Devoure It
+        <button class="change-devoured" data-id="{{id}}" data-devoured="{{devoured}}">
+            Devour It
         </button>
     </li>
     {{/unless}}

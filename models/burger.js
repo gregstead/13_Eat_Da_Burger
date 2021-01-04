@@ -1,11 +1,7 @@
 // Import the ORM
 const orm = require("../config/orm");
 
-const Burger = {
-  constructor(name) {
-    this.id, (this.name = name);
-  },
-
+const burger = {
   all(cb) {
     orm.selectAll("burgers", (res) => {
       cb(res);
@@ -24,4 +20,4 @@ const Burger = {
   },
 };
 
-module.exports = Burger;
+module.exports = burger;

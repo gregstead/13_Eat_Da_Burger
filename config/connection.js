@@ -3,20 +3,16 @@ const mysql = require("mysql");
 
 let connection;
 // Set up for heroku deployment
-try {
-  if (process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-  } else {
-    connection = mysql.createConnection({
-      host: "localhost",
-      port: 3306,
-      user: "root",
-      password: "pathword",
-      database: "burgers_db",
-    });
-  }
-} catch (err) {
-  console.log(err);
+
+if (process.env.JAWSDB_URL) {
+  connection = mysql.createConnection(process.env.JAWSDB_URL);
+} else {
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "pathword",
+    database: "burgers_db",
+  });
 }
 
 // make connection

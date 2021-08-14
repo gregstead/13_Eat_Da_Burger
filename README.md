@@ -1,6 +1,6 @@
 # 13_Eat_Da_Burger
 
-This app takes a name from user and creates a burger on a database. The burger can them be "devoured." The page will render a list of burgers available to devour and burgers that have been devoured.
+This app takes a name from user and creates a burger on a database. The burger can then be "devoured." The page will render a list of burgers available to devour and burgers that have been devoured.
 
 ## Table of contents
 

@@ -14,7 +14,7 @@ This app takes a name from user and creates a burger on a database. The burger c
 
 Visit ...
 
-[video demonstration](...)
+[Deployed App](peaceful-inlet-93418.herokuapp.com/)
 
 ## License
 

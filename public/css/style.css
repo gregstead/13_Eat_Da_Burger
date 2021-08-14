@@ -1,3 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Chango&display=swap");
+
+:root {
+  --font-accent: "Chango", cursive;
+}
+
+/* Typograpy */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Chango", cursive;
+}
+
+.title {
+  font-family: "Chango", cursive;
+  font-size: 8vw;
+}
+
+.split {
+  color: darkorange;
+}
+
+h2 {
+  font-size: 4vw;
+}
+
+.burger-image {
+  font-size: 5rem;
+}
+
+/* Display Properties */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
 body {
   background-color: darkorange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.split {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.split > div {
+  margin-inline: 5vw;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 5vh;
+}
+
+@media screen and (max-width: 375px) {
+  .split {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .split > div {
+    padding-block: 5vh;
+  }
 }

@@ -16,9 +16,9 @@ router.post("/api/burger", (req, response) => {
 // Read
 router.get("/", (req, response) => {
   burger.all((data) => {
-    // Object for handlebars
-    const hbsObject = { burgers: data };
-    response.render("index", hbsObject);
+    // Object for handlebars render function
+    const burgersObject = { burgers: data };
+    response.render("index", burgersObject);
   });
 });
 

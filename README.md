@@ -1,6 +1,8 @@
 # 13_Eat_Da_Burger
 
-This app takes a name from user and creates a burger on a database. The burger can then be "devoured." The page will render a list of burgers available to devour and burgers that have been devoured.
+A simple CRUD app that takes the name from a user and adds it to a list. The "burger" can then be "devoured" and will show up on the "devoured" list.
+
+[Deployed App](peaceful-inlet-93418.herokuapp.com/)
 
 ## Table of contents
 
@@ -10,11 +12,9 @@ This app takes a name from user and creates a burger on a database. The burger c
 - [Tests](#tests)
 - [Questions](#Questions)
 
-## Usage
+## Screenshot
 
-Visit ...
-
-[Deployed App](peaceful-inlet-93418.herokuapp.com/)
+![App Screenshot](./assets/screenshot.png)
 
 ## License
 
